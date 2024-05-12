@@ -2,6 +2,7 @@
 
 window.onload=function(){
     fetchCourse();
+    console.log("index")
 }
 
 let table = document.getElementById("table");
@@ -21,7 +22,7 @@ function fetchCourse(){
                 cell3.innerHTML = data[i].courseName;
                 let anchor = document.createElement("a");
                 anchor.href = `details.html?cid=${data[i].id}`;
-                anchor.text = "See details";  
+                anchor.text = "See details";   
                 cell4.appendChild(anchor);
                 }
             });
