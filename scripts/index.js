@@ -17,6 +17,7 @@ function fetchCourse(){
                 let cell2 = row.insertCell(1);
                 let cell3 = row.insertCell(2);
                 let cell4 = row.insertCell(3);
+                let cell5 = row.insertCell(4);
                 cell1.innerHTML = data[i].dept;
                 cell2.innerHTML = data[i].courseNum;
                 cell3.innerHTML = data[i].courseName;
@@ -24,6 +25,11 @@ function fetchCourse(){
                 anchor.href = `details.html?cid=${data[i].id}`;
                 anchor.text = "See details";   
                 cell4.appendChild(anchor);
+                let anchor1 = document.createElement("a");
+                anchor1.href = `confirm-delete.html?cid=${data[i].id}`;
+                anchor1.text = "Delete Course";   
+                cell5.appendChild(anchor1);
+
                 }
             });
         }
